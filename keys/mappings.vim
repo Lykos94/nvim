@@ -46,6 +46,7 @@ else
 
   " Alternate way to save
   nnoremap <silent> <C-s> :w<CR>
+  inoremap <silent> <C-s> <Esc>:w<CR>
   " Alternate way to quit
   nnoremap <silent> <C-Q> :wq!<CR>
   " Use control-c instead of escape
@@ -95,3 +96,8 @@ endif
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
+
+
+nnoremap <C-PageUp> :BufferNext <CR>
+nnoremap <C-t> :terminal <CR><i>
+nnoremap <C-PageDown> :BufferLast <CR>
