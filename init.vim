@@ -27,8 +27,10 @@ else
 
   " Plugin Configuration
   source $HOME/.config/nvim/keys/which-key.vim
+  " Allow commenting and uncommenting
   source $HOME/.config/nvim/plug-config/vim-commentary.vim
-  source $HOME/.config/nvim/plug-config/rnvimr.vim
+  " source $HOME/.config/nvim/plug-config/rnvimr.vim
+  " Shows whitespace highlighted
   source $HOME/.config/nvim/plug-config/better-whitespace.vim
   source $HOME/.config/nvim/plug-config/fzf.vim
   source $HOME/.config/nvim/plug-config/codi.vim
@@ -37,7 +39,7 @@ else
   " luafile $HOME/.config/nvim/lua/treesitter.lua
   source $HOME/.config/nvim/plug-config/coc/coc.vim
   source $HOME/.config/nvim/plug-config/coc/coc-extensions.vim
-  source $HOME/.config/nvim/plug-config/easymotion.vim
+  " source $HOME/.config/nvim/plug-config/easymotion.vim
   source $HOME/.config/nvim/plug-config/goyo.vim
   source $HOME/.config/nvim/plug-config/vim-rooter.vim
   source $HOME/.config/nvim/plug-config/start-screen.vim
@@ -86,4 +88,10 @@ set relativenumber
 set ignorecase
 set scrollback=100000
 set shell=/bin/zsh
+
+" Configurazioni tema
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_invert_selection = '0'
 colo gruvbox
+set background=dark
+

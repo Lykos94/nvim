@@ -98,6 +98,8 @@ inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
 
-nnoremap <C-PageUp> :BufferNext <CR>
+nnoremap <C-PageDown> :BufferNext <CR>
 nnoremap <C-t> :terminal <CR><i>
-nnoremap <C-PageDown> :BufferLast <CR>
+nnoremap <C-PageUp> :BufferPrevious <CR>
+map <C-z> :silent !echo Hello <CR>
+map <C-I> :Prettier<CR>

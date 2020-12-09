@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Better Comments
     Plug 'tpope/vim-commentary'
+    Plug 'gruvbox-community/gruvbox'
     " Change dates fast
     Plug 'tpope/vim-speeddating'
     " Convert binary, hex, etc..

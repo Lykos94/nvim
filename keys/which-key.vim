@@ -47,7 +47,7 @@ let g:which_key_map['h'] = [ '<C-W>s'                                          ,
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
 let g:which_key_map['o'] = [ ':RnvimrToggle'                                   , 'open' ]
 let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
-let g:which_key_map['q'] = [ ':q'                         , 'quit' ]
+let g:which_key_map['q'] = [ ':close'               , 'Close bufffer' ]
 let g:which_key_map['T'] = [ ':TSHighlightCapturesUnderCursor'                 , 'treesitter highlight' ]
 let g:which_key_map['u'] = [ ':UndotreeToggle'                                 , 'undo tree']
 let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
@@ -245,8 +245,8 @@ let g:which_key_map.g = {
       \ 'b' : [':Git blame'                        , 'blame'],
       \ 'B' : [':GBrowse'                          , 'browse'],
       \ 'c' : [':Git commit'                       , 'commit'],
-      \ 'd' : [':Git diff'                         , 'diff'],
-      \ 'D' : [':Gdiffsplit'                       , 'diff split'],
+      \ 'D' : [':Git diff'                         , 'diff'],
+      \ 'd' : [':Gdiffsplit'                       , 'diff split'],
       \ 'g' : [':GGrep'                            , 'git grep'],
       \ 'G' : [':Gstatus'                          , 'status'],
       \ 'h' : [':GitGutterLineHighlightsToggle'    , 'highlight hunks'],
@@ -254,20 +254,20 @@ let g:which_key_map.g = {
       \ 'i' : [':Gist -b'                          , 'post gist'],
       \ 'j' : ['<Plug>(GitGutterNextHunk)'         , 'next hunk'],
       \ 'k' : ['<Plug>(GitGutterPrevHunk)'         , 'prev hunk'],
-      \ 'l' : [':Git log'                          , 'log'],
+      \ 'v' : [':Git log'                          , 'log'],
       \ 'm' : ['<Plug>(git-messenger)'             , 'message'],
       \ 'p' : [':Git push'                         , 'push'],
       \ 'P' : [':Git pull'                         , 'pull'],
       \ 'r' : [':GRemove'                          , 'remove'],
-      \ 's' : ['<Plug>(GitGutterStageHunk)'        , 'stage hunk'],
       \ 'S' : [':CocCommand fzf-preview.GitStatus' , 'status'],
       \ 't' : [':GitGutterSignsToggle'             , 'toggle signs'],
       \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
-      \ 'v' : [':GV'                               , 'view commits'],
+      \ 'l' : [':GV'                               , 'view commits'],
       \ 'V' : [':GV!'                              , 'view buffer commits'],
       \ }
       " \ 'A' : [':Git add %'                        , 'add current'],
       " \ 'S' : [':!git status'                      , 'status'],
+      " \ 's' : ['<Plug>(GitGutterStageHunk)'        , 'stage hunk'],
 " 
 " 
 " 
@@ -327,7 +327,7 @@ let g:which_key_map.l = {
 " t is for terminal
 let g:which_key_map.t = {
       \ 'name' : '+terminal' ,
-      \ ';' : [':FloatermNew --wintype=normal --height=6'        , 'terminal'],
+      \ ';' : [':FloatermNew --wintype=normal --height=12'        , 'terminal'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
