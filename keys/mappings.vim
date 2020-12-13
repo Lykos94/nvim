@@ -103,3 +103,4 @@ nnoremap <C-t> :terminal <CR><i>
 nnoremap <C-PageUp> :BufferPrevious <CR>
 map <C-z> :silent !echo Hello <CR>
 map <C-I> :Prettier<CR>
+

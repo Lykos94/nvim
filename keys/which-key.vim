@@ -3,7 +3,7 @@
 let @s = 'veS"'
 
 " Timeout
-let g:which_key_timeout = 100
+let g:which_key_timeout = 10000
 
 let g:which_key_display_names = {'<CR>': '↵', '<TAB>': '⇆'}
 
@@ -45,11 +45,11 @@ let g:which_key_map['='] = [ '<C-W>='                                          ,
 let g:which_key_map['e'] = [ ':CocCommand explorer --toggle --sources=file+'   , 'explorer' ]
 let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
 let g:which_key_map['n'] = [ ':let @/ = ""'                                    , 'no highlight' ]
-let g:which_key_map['o'] = [ ':RnvimrToggle'                                   , 'open' ]
+let g:which_key_map['o'] = [ ':CocCommand explorer --preset floating --open-action-strategy tab --sources=file+'                                   , 'open' ]
 let g:which_key_map['p'] = [ ':Files'                                          , 'search files' ]
 let g:which_key_map['q'] = [ ':close'               , 'Close bufffer' ]
 let g:which_key_map['T'] = [ ':TSHighlightCapturesUnderCursor'                 , 'treesitter highlight' ]
-let g:which_key_map['u'] = [ ':UndotreeToggle'                                 , 'undo tree']
+let g:which_key_map['u'] = [ ':call UltiSnips#RefreshSnippets()'                                 , 'undo tree']
 let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
 let g:which_key_map['w'] = [ ':BufferClose!'               , 'Close current tab' ]
 let g:which_key_map['W'] = [ ':BufferCloseAllButCurrent'               , 'Close all but the curent tab' ]
@@ -123,6 +123,12 @@ let g:which_key_map.d = {
 let g:which_key_map.f = {
       \ 'name' : '+find & replace' ,
       \ 'f' : [':Farr --source=vimgrep'    , 'file'],
+      \ 'p' : [':Farr --source=rgnvim'     , 'project'],
+      \ }
+
+" h is for cheatsheet 
+let g:which_key_map.h = {
+      \ 'h' : [':CheatReplace'    , 'ch replace'],
       \ 'p' : [':Farr --source=rgnvim'     , 'project'],
       \ }
 
