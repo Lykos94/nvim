@@ -116,12 +116,19 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'szw/vim-maximizer'
     " Neovim in Browser
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+    " CheatSH implementation for nvim
     Plug 'dbeniamine/cheat.sh-vim'
+    " Rust language for nvim
     Plug 'rust-lang/rust.vim'
-    Plug 'racer-rust/vim-racer'
-    Plug 'sebastianmarkow/deoplete-rust'
+    " Async completion framework
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    " Main theme
     Plug 'agude/vim-eldar'
+    " Language Client for errors and docs
+    Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
   endif
 
 call plug#end()

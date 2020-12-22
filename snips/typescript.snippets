@@ -1,3 +1,30 @@
 priority -50
 
 extends javascript
+
+
+snippet vue-store "Default store in typescript for vue" b
+import { GetterTree, ActionTree, MutationTree } from 'vuex'
+import Axios from '@nuxtjs/axios'
+
+export const state = () => ({
+	element: ""
+})
+
+export type $1State = ReturnType<typeof state>
+
+export const getters: GetterTree<$1State, $1State> = {
+	getElement: (state) => state.element,
+}
+
+export const mutations: MutationTree<$1State> = {
+	setElement: (state, element: string) => (state.element = element),
+}
+
+export const actions: ActionTree<$1State, $1State> = {
+	async fetchElement() {
+		const { data } = await this.$axios.get('')
+		return data
+	},
+}
+endsnippet

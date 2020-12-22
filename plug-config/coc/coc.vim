@@ -52,10 +52,11 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Symbol renaming.
 " nmap <leader>rn <Plug>(coc-rename)
 
+autocmd CursorHold * silent call CocActionAsync('showSignatureHelp')
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  autocmd FileType typescript,json,rs setl formatexpr=CocAction('formatSelected')
   " Update signature help on jump placeholder.
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end

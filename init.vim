@@ -97,12 +97,10 @@ let g:neovide_cursor_vfx_mode = "railgun"
 let g:CheatSheetShowCommentsByDefault=0
 " Replace the default prettier key
 nmap <Leader>py <Plug>(Prettier)
-
-
-" Autocomplete for rust
-" let g:deoplete#sources#rust#racer_binary='/home/lukasz/.cargo/bin/racer'
-" let g:deoplete#sources#rust#rust_source_path='/home/lukasz/.rustlang/rust/src'
-" let g:deoplete#enable_at_startup = 1
-
-
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+
+let g:LanguageClient_serverCommands = {
+\ 'rust': ['rust-analyzer'],
+\ }
+
+
